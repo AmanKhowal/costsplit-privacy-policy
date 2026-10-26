@@ -16,6 +16,8 @@
       --surface: #FFFFFF;
       --border: #E0E0E0;
       --accent: #00897B;
+      --gold: #FFB300;
+      --gold-light: #FFF8E1;
     }
 
     * {
@@ -103,11 +105,20 @@
       border-radius: 8px;
     }
 
+    .highlight-item.gold {
+      background: var(--gold-light);
+      border-left: 4px solid var(--gold);
+    }
+
     .highlight-item strong {
       display: block;
       color: var(--primary-dark);
       font-size: 0.95rem;
       margin-bottom: 4px;
+    }
+
+    .highlight-item.gold strong {
+      color: #E65100;
     }
 
     .highlight-item span {
@@ -194,6 +205,14 @@
       font-size: 0.92rem;
     }
 
+    .pro-box {
+      background: #F3E5F5;
+      border-left: 4px solid #7B1FA2;
+      padding: 16px 18px;
+      border-radius: 8px;
+      margin: 18px 0;
+    }
+
     .contact-box {
       background: #f5f5f5;
       padding: 18px 22px;
@@ -239,7 +258,7 @@
         <div class="meta-item">•</div>
         <div class="meta-item"><strong>Developer:</strong> Aman Beer</div>
         <div class="meta-item">•</div>
-        <div class="meta-item"><strong>Last Updated:</strong> October 25, 2026</div>
+        <div class="meta-item"><strong>Last Updated:</strong> October 26, 2026</div>
       </div>
     </div>
   </header>
@@ -255,29 +274,30 @@
           <strong>No Account Required</strong>
           <span>No login, email, phone number, or password ever needed.</span>
         </div>
-        <div class="highlight-item">
-          <strong>Ad-Supported (Google AdMob)</strong>
-          <span>Native, Interstitial, & App Open Ads help keep the app free.</span>
+        <div class="highlight-item gold">
+          <strong>PaySplit PRO (Ad-Free)</strong>
+          <span>Optional Monthly, Yearly, or Lifetime upgrades via Google Play.</span>
         </div>
         <div class="highlight-item">
-          <strong>User Choice &amp; Opt-Out</strong>
-          <span>Control or reset your Advertising ID anytime via Android settings.</span>
+          <strong>Google Play Billing</strong>
+          <span>All payment info is processed securely by Google. We never store card data.</span>
         </div>
       </div>
 
       <nav class="toc">
         <div class="toc-title">Table of Contents</div>
         <ol>
-          <li><a href="#intro">Introduction</a></li>
-          <li><a href="#info-collect">Information We Collect</a></li>
-          <li><a href="#info-use">How We Use Your Information</a></li>
-          <li><a href="#third-party">Third-Party Services &amp; Google AdMob</a></li>
-          <li><a href="#opt-out">Advertising Choices &amp; Opt-Out</a></li>
-          <li><a href="#security-retention">Data Storage, Security, &amp; Retention</a></li>
-          <li><a href="#children">Children's Privacy</a></li>
-          <li><a href="#play-policy">Google Play Policy Compliance</a></li>
-          <li><a href="#changes">Changes to This Privacy Policy</a></li>
-          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="#intro">1. Introduction</a></li>
+          <li><a href="#info-collect">2. Information We Collect</a></li>
+          <li><a href="#in-app-purchases">3. In-App Purchases &amp; Subscriptions (Google Play Billing)</a></li>
+          <li><a href="#info-use">4. How We Use Your Information</a></li>
+          <li><a href="#third-party">5. Third-Party Services</a></li>
+          <li><a href="#opt-out">6. Advertising Choices &amp; Opt-Out</a></li>
+          <li><a href="#security-retention">7. Data Storage, Security, &amp; Retention</a></li>
+          <li><a href="#children">8. Children's Privacy</a></li>
+          <li><a href="#play-policy">9. Google Play Policy Compliance</a></li>
+          <li><a href="#changes">10. Changes to This Privacy Policy</a></li>
+          <li><a href="#contact">11. Contact Us</a></li>
         </ol>
       </nav>
 
@@ -286,7 +306,8 @@
         <p>
           Welcome to <strong>PaySplit: Smart Bill Splitter</strong> ("we", "our", or "us"). 
           We respect your privacy and are committed to complete transparency regarding how our mobile application 
-          handles user data. This Privacy Policy outlines our data practices for the Android application 
+          handles user information. This Privacy Policy details our practices regarding user-entered data, 
+          third-party advertising services, and in-app purchases for the Android application 
           <strong>PaySplit: Smart Bill Splitter</strong> (Package: <code>com.amankhowalhr.billsplitter</code>).
         </p>
         <p>
@@ -299,7 +320,7 @@
         
         <h3>A. Information You Provide (On-Device Storage Only)</h3>
         <p>
-          PaySplit is designed with an offline-first, privacy-respecting architecture. All user-entered expense data, including:
+          PaySplit is built with an offline-first, privacy-respecting architecture. All user-entered expense data, including:
         </p>
         <ul>
           <li>Bill names, creation dates, and notes</li>
@@ -315,9 +336,9 @@
 
         <h3>B. Information Collected Automatically via Google AdMob</h3>
         <p>
-          To maintain the app and offer its full feature set for free, our application displays native, interstitial, and app-open advertisements 
-          powered by <strong>Google AdMob</strong> (provided by Google LLC). When the app displays ads, the Google Mobile Ads SDK 
-          may automatically collect certain technical and diagnostic data from your device, including:
+          To maintain the app and offer its core features for free, the free tier of our application displays 
+          native, interstitial, and app-open advertisements powered by <strong>Google AdMob</strong> (provided by Google LLC). 
+          When the app displays ads, the Google Mobile Ads SDK may automatically collect certain technical and diagnostic data from your device, including:
         </p>
         <ul>
           <li><strong>Device Identifiers:</strong> Advertising identifiers such as the Google Advertising ID (GAID) or Android ID.</li>
@@ -325,75 +346,117 @@
           <li><strong>Device &amp; Network Telemetry:</strong> Device manufacturer, hardware model, operating system version, screen resolution, mobile carrier, and network connection type.</li>
           <li><strong>Ad Interaction &amp; Diagnostic Data:</strong> Ad viewability impressions, click interactions, app session length, latency, and crash diagnostics to prevent ad fraud and verify valid ad delivery.</li>
         </ul>
+
+        <h3>C. In-App Purchase &amp; Subscription Data</h3>
+        <p>
+          When you purchase or subscribe to <strong>PaySplit PRO</strong>, all financial transactions and payment processing 
+          are handled entirely by <strong>Google Play</strong> via the official Google Play Billing Library. 
+          <strong>We never collect, process, or store your credit/debit card numbers, bank account details, or billing addresses.</strong> 
+          The application only receives a digital purchase token from Google Play to verify your PRO entitlement.
+        </p>
+      </section>
+
+      <section id="in-app-purchases">
+        <h2>3. In-App Purchases &amp; Subscriptions (Google Play Billing)</h2>
+        <div class="pro-box">
+          <p><strong>PaySplit PRO</strong> provides an optional, completely ad-free premium experience with verified PRO status.</p>
+        </div>
+        <p>PaySplit offers the following optional digital plans via Google Play Billing:</p>
+        <ul>
+          <li><strong>Monthly Subscription (<code>paysplit_pro_monthly</code>):</strong> Auto-renewing monthly subscription for ad-free experience.</li>
+          <li><strong>Yearly Subscription (<code>paysplit_pro_yearly</code>):</strong> Auto-renewing yearly subscription offering annual savings.</li>
+          <li><strong>Lifetime Access (<code>paysplit_pro_lifetime</code>):</strong> One-time non-consumable in-app purchase granting permanent ad-free access.</li>
+        </ul>
+
+        <h3>Payment Processing &amp; Security</h3>
+        <p>
+          All billing transactions are processed securely by <strong>Google Play (Google LLC)</strong> under Google's 
+          Terms of Service and Privacy Policy. The developer does not hold or manage your payment credentials.
+        </p>
+
+        <h3>Subscription Management &amp; Cancellation</h3>
+        <p>
+          You have full control over your subscriptions. You can cancel, pause, or switch your subscription at any time:
+        </p>
+        <ol>
+          <li>Open the <strong>Google Play Store</strong> app on your Android device.</li>
+          <li>Tap your profile icon in the top right corner.</li>
+          <li>Tap <strong>Payments &amp; subscriptions</strong> &gt; <strong>Subscriptions</strong>.</li>
+          <li>Select <strong>PaySplit</strong> and tap <strong>Cancel subscription</strong>.</li>
+        </ol>
+        <p>
+          Cancellations take effect at the end of the current billing cycle. You will continue to have PRO ad-free access until the end of that paid period.
+        </p>
+
+        <h3>100% Ad-Free Experience</h3>
+        <p>
+          Once an active PRO purchase or subscription is detected, all Google AdMob banner, native, interstitial, 
+          and app-open ads are completely disabled across the entire app.
+        </p>
       </section>
 
       <section id="info-use">
-        <h2>3. How We Use Your Information</h2>
+        <h2>4. How We Use Your Information</h2>
         <p>The information handled by or through the app is used strictly for the following purposes:</p>
         <ul>
           <li><strong>Local Expense Computation:</strong> Calculating individual shares, proportional taxes, discounts, tips, and summaries entirely on your device.</li>
           <li><strong>Sharing via Native Intents:</strong> When you share a bill summary via WhatsApp, SMS, email, or copy to clipboard, the text is formatted locally and dispatched via Android's native share sheet.</li>
-          <li><strong>Ad Delivery &amp; Fraud Prevention:</strong> Enabling Google AdMob to display native, interstitial, and app-open ads, measure ad performance, prevent fraudulent clicks, and comply with ad delivery standards.</li>
+          <li><strong>Ad Delivery &amp; Fraud Prevention:</strong> Enabling Google AdMob to display ads in the free version, measure performance, and detect invalid clicks.</li>
+          <li><strong>PRO Status Verification:</strong> Storing your purchase entitlement locally on your device so that PRO features and ad removal remain active even when offline or after restarting the app.</li>
         </ul>
       </section>
 
       <section id="third-party">
-        <h2>4. Third-Party Services &amp; Google AdMob</h2>
+        <h2>5. Third-Party Services</h2>
         <p>
           Our application integrates third-party services provided by <strong>Google LLC</strong>. 
-          Specifically, we use the <strong>Google AdMob SDK</strong> (Google Mobile Ads) for native, interstitial, and app-open advertisements.
-        </p>
-        <p>
-          Google AdMob may collect and process information in accordance with its own privacy policy. 
-          We encourage you to review Google's privacy practices:
+          These services operate under their respective privacy policies:
         </p>
         <ul>
-          <li><strong>Google Privacy Policy:</strong> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></li>
-          <li><strong>How Google Uses Data from Partner Sites/Apps:</strong> <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">https://policies.google.com/technologies/partner-sites</a></li>
-          <li><strong>Google AdMob Information:</strong> <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener noreferrer">https://support.google.com/admob/answer/6128543</a></li>
+          <li><strong>Google Play In-App Billing:</strong> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></li>
+          <li><strong>Google AdMob (Mobile Ads):</strong> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></li>
+          <li><strong>How Google Uses Data from Partner Apps:</strong> <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">https://policies.google.com/technologies/partner-sites</a></li>
+          <li><strong>Google AdMob Publisher Information:</strong> <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener noreferrer">https://support.google.com/admob/answer/6128543</a></li>
         </ul>
         <p>
-          We do not sell, rent, or trade your personal data or device identifiers to any data brokers or advertisers.
+          We do not sell, rent, or trade your personal data or device identifiers to any third-party brokers.
         </p>
       </section>
 
       <section id="opt-out">
-        <h2>5. Advertising Choices &amp; Opt-Out</h2>
+        <h2>6. Advertising Choices &amp; Opt-Out</h2>
         <p>
-          You have full control over personalized advertising on your Android device. 
-          You can opt out of interest-based ads or reset your unique advertising identifier at any time:
+          You have full control over personalized advertising on your Android device:
         </p>
         <ol>
           <li>Open your Android device <strong>Settings</strong>.</li>
           <li>Scroll down and tap <strong>Google</strong> (or <strong>Privacy</strong>).</li>
           <li>Select <strong>Ads</strong>.</li>
-          <li>Tap <strong>Reset advertising ID</strong> or <strong>Delete advertising ID</strong> (or toggle <em>"Opt out of Ads Personalization"</em> on older Android versions).</li>
+          <li>Tap <strong>Reset advertising ID</strong> or <strong>Delete advertising ID</strong> (or toggle <em>"Opt out of Ads Personalization"</em> on older versions).</li>
         </ol>
         <div class="callout">
-          <strong>Note:</strong> Opting out of personalized ads does not mean you will stop seeing advertisements. 
-          Instead, you will continue to see general (contextual) ads that are not tailored to your specific interests or browsing habits.
+          <strong>Permanent Ad Removal:</strong> You can completely eliminate all advertising from PaySplit by upgrading to <strong>PaySplit PRO</strong> at any time.
         </div>
       </section>
 
       <section id="security-retention">
-        <h2>6. Data Storage, Security, &amp; Retention</h2>
+        <h2>7. Data Storage, Security, &amp; Retention</h2>
         <p>
-          <strong>User Data Retention:</strong> All bill records, participant entries, and splits remain in your local app sandbox. 
-          They are retained until you choose to delete them within the app, clear the application's storage data via Android Settings, 
-          or uninstall the application.
+          <strong>User Bill Data Retention:</strong> All bill records, participant entries, and splits remain in your local app sandbox. 
+          They are retained until you delete them within the app, clear the application storage in Android Settings, 
+          or uninstall the app.
         </p>
         <p>
-          <strong>Security:</strong> Because your data resides within Android's protected application sandbox, 
-          other apps cannot access your stored bill calculations.
+          <strong>Security:</strong> Your data is isolated inside Android's secure application sandbox. 
+          Other apps on your device cannot access your stored bill calculations.
         </p>
         <p>
-          <strong>AdMob Telemetry Retention:</strong> Technical telemetry and diagnostics collected by Google AdMob are retained 
-          according to Google's standard data retention schedules.
+          <strong>Payment &amp; AdMob Records:</strong> Financial purchase receipts and ad telemetry are retained securely by Google in accordance with Google Play and Google AdMob data retention schedules.
         </p>
       </section>
 
       <section id="children">
-        <h2>7. Children's Privacy</h2>
+        <h2>8. Children's Privacy</h2>
         <p>
           PaySplit: Smart Bill Splitter is a general-purpose utility app intended for bill management and shared expense calculations. 
           The app is not directed to children under the age of 13, and we do not knowingly collect personal identifiable information 
@@ -406,16 +469,17 @@
       </section>
 
       <section id="play-policy">
-        <h2>8. Google Play Policy Compliance</h2>
+        <h2>9. Google Play Policy Compliance</h2>
         <p>
           This application complies with Google Play Developer Program Policies, including the User Data Policy, 
-          Families Policy, and Ads Policy. The app declares its use of advertising identifiers and third-party advertising SDKs 
-          transparently in both the in-app Privacy Policy screen and this publicly accessible policy document.
+          Monetization and Ads Policy, Families Policy, and Subscriptions Policy. 
+          The app discloses its use of advertising identifiers, Google AdMob SDK, and Google Play Billing transparently 
+          in both this policy document and within the application's in-app Privacy Policy screen.
         </p>
       </section>
 
       <section id="changes">
-        <h2>9. Changes to This Privacy Policy</h2>
+        <h2>10. Changes to This Privacy Policy</h2>
         <p>
           We may update our Privacy Policy periodically to reflect changes in our app features, SDK integrations, 
           or legal requirements. Any modifications will be posted to this page and updated in the in-app Privacy Policy screen. 
@@ -424,7 +488,7 @@
       </section>
 
       <section id="contact">
-        <h2>10. Contact Us</h2>
+        <h2>11. Contact Us</h2>
         <p>
           If you have any questions, comments, or concerns regarding this Privacy Policy or our privacy practices, 
           please contact the developer:
